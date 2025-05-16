@@ -1,0 +1,24 @@
+name: check challenge structure
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  check_chall_tree:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+    - run: pip install -r requirements.txt
+    - name: Check all challenge_files
+      run : |
+        find . -not -path "*/.git*" -depth 2 -type d -exec python3 .github/scripts/parse-yaml.py "{}" \;

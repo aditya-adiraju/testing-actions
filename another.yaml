@@ -1,0 +1,25 @@
+# Required
+name: Data Explorer
+author: nneonneo
+category: web
+description: Wrangle your CSVs with Data Explorer and its hip, retro UI!
+
+hosted: true
+connection_info: nc hostname 8000
+
+flags:
+    - maple{0rder_by_1nject1on_is_v3ry_powerfuL!_b5e3b549713b0cd0}
+
+# Tags are used to provide additional public tagging to a challenge
+tags:
+    - web
+
+files:
+    - dist.zip
+
+hints:
+    - The server is running with PYTHONOPTIMIZE enabled.
+
+state: visible
+
+version: "0.1"
