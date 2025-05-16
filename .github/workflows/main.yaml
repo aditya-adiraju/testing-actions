@@ -18,7 +18,7 @@ jobs:
       with:
         python-version: '3.12'
         cache: 'pip'
-    - run: pip install -r requirements.txt
+    - run: pip install -r .github/scripts/requirements.txt
     - name: Check all challenge_files
       run : |
         find . -not -path "*/.git*" -depth 2 -type d -exec python3 .github/scripts/parse-yaml.py "{}" \;
