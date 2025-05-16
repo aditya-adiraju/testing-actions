@@ -22,4 +22,4 @@ jobs:
     - name: Check all challenge_files
       run : |
         ls
-        find . -not -path '*/.git*' -depth 2 -type d -exec python3 .github/scripts/parse-yaml.py {} \;
+        find . -not -path '*/.git*' -mindepth 2 -maxdepth 2 -type d -exec python3 .github/scripts/parse-yaml.py {} \;
